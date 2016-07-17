@@ -4,14 +4,13 @@ then
 echo Run this script as root
 exit
 fi
-
 read -p "This will destroy the MariaDB installation and its data. Do you want to continue?(y/n)" answer
 if [ "$answer" == "n" ]
 then
         exit
 elif [ "$answer" == "y" ]
 then
-        yum autoremove mariadb mariadb-server -y
+        dnf autoremove mariadb mariadb-server -y
         rm -rf /var/lib/mysql
         rm -rf /var/log/mariadb/mariadb.log
         rm -rf /var/run/mariadb/mariadb.pid
