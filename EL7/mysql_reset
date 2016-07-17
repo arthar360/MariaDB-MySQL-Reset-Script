@@ -1,4 +1,10 @@
 #!/bin/bash
+if [ `id -u` -ne "0" ]
+then
+echo Run this script as root
+exit
+fi
+
 read -p "This will destroy the MariaDB installation and its data. Do you want to continue?(y/n)" answer
 if [ "$answer" == "n" ]
 then
