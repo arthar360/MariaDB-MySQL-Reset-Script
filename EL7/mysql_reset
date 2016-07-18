@@ -16,6 +16,7 @@ then
         rm -rf /var/log/mariadb/mariadb.log
         rm -rf /var/run/mariadb/mariadb.pid
         rm -rf /etc/my.cnf.d
+        rm -rf /etc/my.cnf
         echo "MariaDB removed completely"
 else
         echo "UnKnown Option"
