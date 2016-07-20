@@ -11,7 +11,6 @@ then
         exit
 elif [ "$answer" == "y" ]
 then
-	systemctl stop mariadb.service
         yum autoremove mariadb mariadb-server -y
         rm -rf /var/lib/mysql
         rm -rf /var/log/mariadb/mariadb.log
